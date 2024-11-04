@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WinUtility"
         mc:Ignorable="d"
         Background="#4a9264"
-        Title="Utilidad de Instalacion de Programas en Windows 10/11 by Mggons" Height="493" Width="786">
+        Title="Utilidad de Instalacion de Programas en Windows 10/11 by Mggons" Height="493" Width="786" WindowState="Maximized">
 	<Viewbox>
 		<Grid Background="#4a9264" ShowGridLines="False" Name="MainGrid">
 			<Grid.ColumnDefinitions>
