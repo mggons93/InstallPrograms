@@ -21,6 +21,7 @@
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
 							<ColumnDefinition Width="1*"/>
+							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="0" Margin="10">
 							<Label Content="Navegadores" FontSize="16" Margin="5,0"/>
