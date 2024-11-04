@@ -13,6 +13,7 @@
                 <ColumnDefinition Width="0*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
+        <TabControl Grid.Column="1" Padding="-1" Name="TabNav" SelectedIndex="0">
             <Grid Background="#000000" Margin="0,0,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="150*" />
