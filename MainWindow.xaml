@@ -3,138 +3,144 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WinUtility"
+        
         mc:Ignorable="d"
-        Background="#4a9264"
-        Title="Utilidad de Instalacion de Programas en Windows 10/11 by Mggons" Height="493" Width="786" WindowState="Maximized">
-	<Viewbox>
-		<Grid Background="#4a9264" ShowGridLines="False" Name="MainGrid">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="9*"/>
-				<ColumnDefinition Width="2*"/>
-			</Grid.ColumnDefinitions>
-			<TabControl Grid.Column="1" Padding="-1" Name="TabNav" SelectedIndex="0">
-				<TabItem Header="Install" Visibility="Collapsed" Name="Tab1">
-					<Grid Background="#222222">
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="1*"/>
-							<ColumnDefinition Width="1*"/>
-							<ColumnDefinition Width="1*"/>
-							<ColumnDefinition Width="1*"/>
-							<ColumnDefinition Width="1*"/>
-						</Grid.ColumnDefinitions>
-						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="0" Margin="10">
-							<Label Content="Navegadores" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installbrave" Content="Brave" Margin="5,0"/>
-							<CheckBox Name="Installchrome" Content="Google Chrome" Margin="5,0"/>
-							<CheckBox Name="Installfirefox" Content="Mozilla Firefox" Margin="5,0"/>
-							<CheckBox Name="Installvivaldi" Content="Vivaldi" Margin="5,0"/>
-							
-							<Label Content="Comunicacion" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installdiscord" Content="Discord" Margin="5,0"/>
-							<CheckBox Name="Installhexchat" Content="Hexchat" Margin="5,0"/>
-							<CheckBox Name="Installmatrix" Content="Matrix" Margin="5,0"/>
-							<CheckBox Name="Installsignal" Content="Signal" Margin="5,0"/>
-							<CheckBox Name="Installskype" Content="Skype" Margin="5,0"/>
-							<CheckBox Name="Installslack" Content="Slack" Margin="5,0"/>
-							<CheckBox Name="Installteams" Content="Microsoft Teams" Margin="5,0"/>
-							<CheckBox Name="Installzoom" Content="Zoom Video Conference" Margin="5,0"/>
-							
-							<Label Content="Diseno/Audio" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installaudacity" Content="Audacity" Margin="5,0"/>
-							<CheckBox Name="Installblender" Content="Blender (3D Graphics)" Margin="5,0"/>
-							<CheckBox Name="Installgimp" Content="GIMP (Image Editor)" Margin="5,0"/>
-							<CheckBox Name="Installinkscape" Content="Inkscape" Margin="5,0"/>
-							
-							<Label Content="Add-ons Esenciales" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installterminal" Content="MS Terminal" Margin="5,0"/>
-							<CheckBox Name="Installdirectx" Content="Direct X Requerido" Margin="5,0"/>
-							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
-							<CheckBox Name="Installmsvc" Content="Visual C++/Dot.Net" IsChecked="True" Margin="5,0"/>
-													
-							
-						</StackPanel>
-						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="1" Margin="10">
+        Background="#000000"
+        Title="Utilidad de Instalacion de Apps usando Winget by Mggons" Height="484" Width="652" WindowState="Maximized">
+    <Viewbox Height="448" Width="677">
+        <Grid Background="#000000" ShowGridLines="False" Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid Background="#000000" Margin="0,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150*" />
+                    <ColumnDefinition Width="233*" />
+                    <ColumnDefinition Width="134*" />
+                    <ColumnDefinition Width="78*" />
+                    <ColumnDefinition Width="158*" />
+                    <ColumnDefinition Width="0*" />
+                    <ColumnDefinition Width="0*" />
+                    <ColumnDefinition Width="0*" />
+                    <ColumnDefinition Width="0*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Margin="10">
+                    <Label Content="Navegadores" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installbrave" Content="Brave (Latest)" Margin="5,0" />
+                    <CheckBox Name="Installchrome" Content="Google Chrome (Latest)" IsChecked="True" Margin="5,0" />
+                    <CheckBox Name="Installfirefox" Content="Mozilla Firefox (Latest)" Margin="5,0" />
+                    <CheckBox Name="InstallOpera" Content="Opera (Latest)" Margin="5,0" />
+                    <CheckBox Name="Installvivaldi" Content="Vivaldi (Latest)" Margin="5,0" />
+                    <TextBlock Text="Mas Reciente = Latest" FontWeight="Bold" FontSize="12.5" Margin="5,0" />
+                    
+                    <Label Content="Comunicacion" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installdiscord" Content="Discord " Margin="5,0" />
+                    <CheckBox Name="Installhexchat" Content="Hexchat" Margin="5,0" />
+                    <CheckBox Name="Installteams" Content="MS Teams" Margin="5,0" />
+                    <CheckBox Name="Installsignal" Content="Signal" Margin="5,0" />
+                    <CheckBox Name="Installskype" Content="Skype" Margin="5,0" />
+                    <CheckBox Name="Installzoom" Content="Zoom" Margin="5,0" />
 
-							<Label Content="Office Suites" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="InstallMicrosoftOffice" Content="Microsoft Office 365 Enterprise" Margin="5,0"/>
-							<CheckBox Name="InstallMicrosoftOffice2" Content="Microsoft Office 365 (No Teams)" Margin="5,0"/>
-							<CheckBox Name="Installlibreoffice" Content="Libre Office" Margin="5,0"/>
-							<CheckBox Name="Installwpsoffice" Content="WPS Office" Margin="5,0"/>							
+                    <Label Content="Diseno/Audio" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installaudacity" Content="Audacity (Audio Editor)" Margin="5,0" />
+                    <CheckBox Name="Installblender" Content="Blender (3D Graphics)" Margin="5,0" />
+                    <CheckBox Name="Installgimp" Content="GIMP (Image Editor)" Margin="5,0" />
+                    <CheckBox Name="Installkrita" Content="Krita (Image Editor)" Margin="5,0" />
+                    <CheckBox Name="Installinkscape" Content="Inkscape (Image Editor)" Margin="5,0" />
 
-							<Label Content="Juegos Online" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installepicgames" Content="Epic Games Launcher" Margin="5,0"/>
-							<CheckBox Name="Installgog" Content="GOG Galaxy Launcher" Margin="5,0"/>
-							<CheckBox Name="Installsteam" Content="Steam Launcher" Margin="5,0"/>
+                    <Label Content="Add-ons Windows" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installterminal" Content="MS Terminal" Margin="5,0" />
+                    <CheckBox Name="Installdirectx" Content="MS Direct X" IsChecked="True" Margin="5,0" />
+                    <CheckBox Name="Installjava8SE" Content="Java (Opcional)" Margin="5,0" />
+                    <CheckBox Name="Installmsvc" Content="Visual C++/Dot.Net" IsChecked="True" Margin="5,0" />
+                </StackPanel>
+                
+                <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="1" Margin="10">
+                    <Label Content="Office Suites" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installlibreoffice" Content="Libre Office" Margin="5,0" />
+                    <CheckBox Name="InstallMicrosoftOffice" Content="Microsoft 365" Margin="5,0" />
+                    <CheckBox Name="InstallMicrosoftOffice2" Content="Microsoft 365 (No Teams)" Margin="5,0" />
+                    <CheckBox Name="Installonlyoffice" Content="Only Office" Margin="5,0" />
+                    <CheckBox Name="Installwpsoffice" Content="WPS Office" Margin="5,0" />
 
-							<Label Content="Redes" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installadvancedip" Content="Advanced IP Scanner" Margin="5,0"/>
-							<CheckBox Name="Installmremoteng" Content="mRemoteNG" Margin="5,0"/>
-							<CheckBox Name="Installputty" Content="Putty" Margin="5,0"/>
-							<CheckBox Name="Installscp" Content="WinSCP" Margin="5,0"/>
-							<CheckBox Name="Installwireshark" Content="WireShark" Margin="5,0"/>
+                    <Label Content="Juegos Online" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installepicgames" Content="Epic Games Launcher" Margin="5,0" />
+                    <CheckBox Name="Installgog" Content="GOG Galaxy Launcher" Margin="5,0" />
+                    <CheckBox Name="Installsteam" Content="Steam Launcher" Margin="5,0" />
 
-							<Label Content="Multimedia" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installeartrumpet" Content="Eartrumpet (Audio)" Margin="5,0"/>
-							<CheckBox Name="Installfoobar" Content="Foobar2000 (Music Player)" Margin="5,0"/>
-							<CheckBox Name="Installhandbrake" Content="HandBrake" Margin="5,0"/>
-							<CheckBox Name="Installimageglass" Content="ImageGlass (Image Viewer)" Margin="5,0"/>
-							<CheckBox Name="Installmpc" Content="Media Player Classic (Video Player)" Margin="5,0"/>
-							<CheckBox Name="Installobs" Content="OBS Studio" Margin="5,0"/>
-							<CheckBox Name="Installsharex" Content="ShareX (Screenshots)" Margin="5,0"/>
-							<CheckBox Name="Installspotify" Content="Spotify" Margin="5,0"/>
-							<CheckBox Name="Installvlc" Content="VLC (Video Player)" Margin="5,0"/>
-							<CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0"/>
+                    <Label Content="Redes" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installadvancedip" Content="Advanced IP Scanner" Margin="5,0" />
+                    <CheckBox Name="Installmremoteng" Content="mRemoteNG" Margin="5,0" />
+                    <CheckBox Name="Installputty" Content="Putty" Margin="5,0" />
+                    <CheckBox Name="Installscp" Content="WinSCP" Margin="5,0" />
+                    <CheckBox Name="Installwireshark" Content="WireShark" Margin="5,0" />
 
-						</StackPanel>
-						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="2" Margin="10">
-							
-							<Label Content="PDF" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
-							<CheckBox Name="Installpdf24" Content="PDF24 Creator" Margin="5,0"/>
-							<CheckBox Name="Installnitro" Content="Nitro PDF Pro" Margin="5,0"/>
-							
-							<Label Content="Programacion" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installatom" Content="Atom" Margin="5,0"/>
-							<CheckBox Name="Installgithubdesktop" Content="GitHub Desktop" Margin="5,0"/>
-							<CheckBox Name="Installjava16" Content="OpenJDK Java 16" Margin="5,0"/>
-							<CheckBox Name="Installjava18" Content="Oracle Java 18" Margin="5,0"/>
-							<CheckBox Name="Installjetbrains" Content="Jetbrains Toolbox" Margin="5,0"/>
-							<CheckBox Name="Installnodejs" Content="NodeJS" Margin="5,0"/>
-							<CheckBox Name="Installnodejslts" Content="NodeJS LTS" Margin="5,0"/>
-							<CheckBox Name="Installpython3" Content="Python3" Margin="5,0"/>
-							<CheckBox Name="Installsublime" Content="Sublime" Margin="5,0"/>
-							<CheckBox Name="Installvisualstudio" Content="Visual Studio 2022 Community" Margin="5,0"/>
-							<CheckBox Name="Installvscode" Content="VS Code" Margin="5,0"/>
-							<CheckBox Name="Installvscodium" Content="VS Codium" Margin="5,0"/>
-							<CheckBox Name="Installnotepadplus" Content="Notepad++" IsChecked="True" Margin="5,0"/>
-							
-							<Label Content="Soporte Remoto" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installteamviewer" Content="TeamViewer" Margin="5,0"/>
-							<CheckBox Name="Installanydesk" Content="Anydesk" Margin="5,0"/>
-							<CheckBox Name="Installrustdesk" Content="RustDesk" IsChecked="True" Margin="5,0"/>
-						</StackPanel>
-						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="3" Margin="10">
-							
-							<Label Content="Utilidades" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installsevenzip" Content="7-Zip" Margin="5,0"/>
-							<CheckBox Name="Installcpuz" Content="CPU-Z" Margin="5,0"/>
-							<CheckBox Name="Installesearch" Content="Everything Search" Margin="5,0"/>
-							<CheckBox Name="Installgpuz" Content="GPU-Z" Margin="5,0"/>
-							<CheckBox Name="Installhwinfo" Content="HWInfo" Margin="5,0"/>
-							<CheckBox Name="Installmalwarebytes" Content="MalwareBytes" Margin="5,0"/>
-							<CheckBox Name="Installpowertoys" Content="Microsoft Powertoys" Margin="5,0"/>
-							<CheckBox Name="Installrufus" Content="Rufus Imager" Margin="5,0"/>
-							<CheckBox Name="Installttaskbar" Content="Translucent Taskbar" Margin="5,0"/>
-							<CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0"/>
-							
-							
-							<Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
-							<Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema"/>
-						</StackPanel>
-					</Grid>
-				</TabItem>				
-			</TabControl>
-		</Grid>
-	</Viewbox>
+                    <Label Content="Multimedia" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installhandbrake" Content="HandBrake" Margin="5,0" />
+                    <CheckBox Name="Installmpc" Content="Media Player Classic" Margin="5,0" />
+                    <CheckBox Name="Installobs" Content="OBS Studio" Margin="5,0" />
+                    <CheckBox Name="Installvlc" Content="VLC (Video Player)" IsChecked="True" Margin="5,0" />
+                    <CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0" />
+
+                    <Label Content="Desinstaladores" FontWeight="Bold" FontSize="16" Margin="5,0" />
+                    <CheckBox Name="Installgeekunistaller" Content="Geek Unistaller" Margin="5,0" />
+                    <CheckBox Name="Installiobitunistaller" Content="IObit Uninstaller" Margin="5,0" />
+                    <CheckBox Name="Installrevouninstaller" Content="Revo Uninstaller" IsChecked="True" Margin="5,0" />
+                    <TextBlock Text="" FontWeight="Bold" FontSize="12.5" Margin="5,0" />
+                </StackPanel>
+                
+                <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="2" Margin="10">
+                    <Label Content="PDF" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0" />
+                    <CheckBox Name="Installfoxitreader" Content="Foxit PDF Reader" Margin="5,0" />
+                    <CheckBox Name="Installnitro" Content="Nitro PDF Pro" Margin="5,0" />
+                    <CheckBox Name="Installpdf24" Content="PDF24 Creator" Margin="5,0" />
+                    <CheckBox Name="InstallSumatraPDF" Content="Sumatra PDF" Margin="5,0" />
+
+                    <Label Content="Programacion" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installatom" Content="Atom" Margin="5,0" />
+                    <CheckBox Name="Installgithubdesktop" Content="GitHub Desktop" Margin="5,0" />
+                    <CheckBox Name="Installjetbrains" Content="Jetbrains Toolbox" Margin="5,0" />
+                    <CheckBox Name="Installnotepadplus" Content="Notepad++" IsChecked="True" Margin="5,0" />
+                    <CheckBox Name="Installnodejs" Content="NodeJS" Margin="5,0" />
+                    <CheckBox Name="Installnodejslts" Content="NodeJS LTS" Margin="5,0" />
+                    <CheckBox Name="Installjava16" Content="OpenJDK Java 16" Margin="5,0" />
+                    <CheckBox Name="Installjava18" Content="Oracle Java 18" Margin="5,0" />
+                    <CheckBox Name="Installpython3" Content="Python3" Margin="5,0" />
+                    <CheckBox Name="Installsublime" Content="Sublime" Margin="5,0" />
+                    <CheckBox Name="Installvisualstudio" Content="VS Community 2022" Margin="5,0" />
+                    <CheckBox Name="Installvscode" Content="VS Code" Margin="5,0" />
+                    <CheckBox Name="Installvscodium" Content="VS Codium" Margin="5,0" />
+                    <TextBlock Text="VS = Visual Studio" FontWeight="Bold" FontSize="12" Margin="5,0" />
+                    
+                    <Label Content="Soporte Remoto" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installteamviewer" Content="TeamViewer" Margin="5,0" />
+                    <CheckBox Name="Installanydesk" Content="Anydesk" Margin="5,0" />
+                    <CheckBox Name="Installrustdesk" Content="RustDesk (Recomendado)" IsChecked="True" Margin="5,0" />
+                    <CheckBox Name="InstallTightVNC" Content="TightVNC"  Margin="5,0" />
+                </StackPanel>
+                
+                <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="3" Margin="10">
+                    <Label Content="Utilidades" FontWeight="Bold" FontSize="14" Margin="5,0" />
+                    <CheckBox Name="Installsevenzip" Content="7-Zip" Margin="5,0" />
+                    <CheckBox Name="Installcpuz" Content="CPU-Z" Margin="5,0" />
+                    <CheckBox Name="Installesearch" Content="Everything Search" Margin="5,0" />
+                    <CheckBox Name="Installgpuz" Content="GPU-Z" Margin="5,0" />
+                    <CheckBox Name="Installhwinfo" Content="HWInfo" Margin="5,0" />
+                    <CheckBox Name="Installmalwarebytes" Content="MalwareBytes" Margin="5,0" />
+                    <CheckBox Name="Installpowertoys" Content="Microsoft Powertoys" Margin="5,0" />
+                    <CheckBox Name="Installrufus" Content="Rufus Imager" Margin="5,0" />
+                    <CheckBox Name="Installttaskbar" Content="Translucent Taskbar" Margin="5,0" />
+                    <CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0" />
+                    
+                    <Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados" />
+                    <Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema" />
+                    <TabControl Padding="-1" Name="TabNav" SelectedIndex="0">
+                        <TabItem Header="Install" Visibility="Collapsed" Name="Tab1"></TabItem>
+                    </TabControl>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Viewbox>
 </Window>
