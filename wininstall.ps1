@@ -10,11 +10,10 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 	Exit
 }
 
-Write-Host "Ocultando Actualizacion KB5005463"
-Install-PackageProvider -Name Nuget -Force
-Install-Module PSWindowsUpdate -Force
-Hide-WindowsUpdate -KBArticleID KB5005463 -Confirm:$False
-
+#Write-Host "Ocultando Actualizacion KB5005463"
+#Install-PackageProvider -Name Nuget -Force
+#Install-Module PSWindowsUpdate -Force
+#Hide-WindowsUpdate -KBArticleID KB5005463 -Confirm:$False
 
 # GUI Specs
 Write-Host "Checking winget..."
@@ -67,26 +66,37 @@ write-host "Found the following interactable elements from our form" -Foreground
 get-variable WPF*
 }
  
-
 #===========================================================================
 # Tab 1 - Install
 #===========================================================================
 $WPFinstall.Add_Click({
     $wingetinstall = New-Object System.Collections.Generic.List[System.Object]
     If ( $WPFInstallmsvc.IsChecked -eq $true ) {
-	$wingetinstall.Add("Microsoft.VCRedist.2005.x64")
-	$wingetinstall.Add("Microsoft.VCRedist.2005.x86")
-	$wingetinstall.Add("Microsoft.VCRedist.2008.x64")
-	$wingetinstall.Add("Microsoft.VCRedist.2008.x86")
-	$wingetinstall.Add("Microsoft.VCRedist.2010.x64")
-	$wingetinstall.Add("Microsoft.VCRedist.2010.x86")
-	$wingetinstall.Add("Microsoft.VCRedist.2012.x64")
-	$wingetinstall.Add("Microsoft.VCRedist.2012.x86")
-	$wingetinstall.Add("Microsoft.VCRedist.2013.x64")
-	$wingetinstall.Add("Microsoft.VCRedist.2013.x86")
-	$wingetinstall.Add("Microsoft.VCRedist.2015.x64")
-	$wingetinstall.Add("Microsoft.VCRedist.2015.x86")
-	$WPFInstallmsvc.IsChecked = $false
+    # Añadir versiones de Visual C ++ Redist
+    $wingetinstall.Add("Microsoft.VCRedist.2005.x64")
+    $wingetinstall.Add("Microsoft.VCRedist.2005.x86")
+    $wingetinstall.Add("Microsoft.VCRedist.2008.x64")
+    $wingetinstall.Add("Microsoft.VCRedist.2008.x86")
+    $wingetinstall.Add("Microsoft.VCRedist.2010.x64")
+    $wingetinstall.Add("Microsoft.VCRedist.2010.x86")
+    $wingetinstall.Add("Microsoft.VCRedist.2012.x64")
+    $wingetinstall.Add("Microsoft.VCRedist.2012.x86")
+    $wingetinstall.Add("Microsoft.VCRedist.2013.x64")
+    $wingetinstall.Add("Microsoft.VCRedist.2013.x86")
+    $wingetinstall.Add("Microsoft.VCRedist.2015.x64")
+    $wingetinstall.Add("Microsoft.VCRedist.2015.x86")
+    # Añadir versiones de Dot.NET
+    $wingetinstall.Add("Microsoft.DotNet.Runtime.3_1")
+    $wingetinstall.Add("Microsoft.DotNet.Runtime.5")
+    $wingetinstall.Add("Microsoft.DotNet.Runtime.6")
+    $wingetinstall.Add("Microsoft.DotNet.Runtime.7")
+    $wingetinstall.Add("Microsoft.DotNet.Runtime.8")
+    $wingetinstall.Add("Microsoft.DotNet.DesktopRuntime.3_1")
+    $wingetinstall.Add("Microsoft.DotNet.DesktopRuntime.5")
+    $wingetinstall.Add("Microsoft.DotNet.DesktopRuntime.6")
+    $wingetinstall.Add("Microsoft.DotNet.DesktopRuntime.7")
+    $wingetinstall.Add("Microsoft.DotNet.DesktopRuntime.8")
+    $WPFInstallmsvc.IsChecked = $false
     }
     If ( $WPFInstalldirectx.IsChecked -eq $true ) { 
         $wingetinstall.Add("Microsoft.DirectX")
@@ -470,7 +480,4 @@ $WPFInstallUpgrade.Add_Click({
     [System.Windows.MessageBox]::Show($Messageboxbody,$MessageboxTitle,$ButtonType,$MessageIcon)
 })
 
-#===========================================================================
-# Shows the form
-#===========================================================================
 $Form.ShowDialog() | out-null
