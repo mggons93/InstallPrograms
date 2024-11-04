@@ -49,7 +49,7 @@
 							<CheckBox Name="Installterminal" Content="Windows Terminal update" Margin="5,0"/>
 							<CheckBox Name="Installdirectx" Content="Direct X Requerido" Margin="5,0"/>
 							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
-							<CheckBox Name="Installmsvc" Content="Visual Redistributable" IsChecked="True" Margin="5,0"/>
+							<CheckBox Name="Installmsvc" Content="Visual C++/Dot.Net" IsChecked="True" Margin="5,0"/>
 													
 							
 						</StackPanel>
