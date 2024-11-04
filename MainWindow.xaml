@@ -42,7 +42,7 @@
                             <CheckBox Name="Installzoom" Content="Zoom" Margin="5,0" />
 
                             <Label Content="Imagenes / Audio" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            <TextBlock Text="Editores de Audio/Imagenes" FontWeight="Bold" FontSize="12" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <TextBlock Text="Editores de Audio/Imagen" FontWeight="Bold" FontSize="10" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installaudacity" Content="Audacity (Audio Editor)" Margin="5,0" />
                             <CheckBox Name="Installblender" Content="Blender (3D Graphics)" Margin="5,0" />
                             <CheckBox Name="Installgimp" Content="GIMP (Image Editor)" Margin="5,0" />
@@ -136,11 +136,17 @@
                             <CheckBox Name="InstallBitdefenderfree" Content="Bitdefender Free Edition" Margin="5,0" />
                             <CheckBox Name="Installkasfree" Content="Kaspersky Free" Margin="5,0" />  
                             <CheckBox Name="Installmalwarebytes" Content="MalwareBytes" Margin="5,0" />
+
+                            <Label Content="MS Toolkit" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <CheckBox Name="Installpowertoys" Content="Microsoft Powertoys" Margin="5,0" />
+
+                            <Label Content="Optimizacion" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <CheckBox Name="Installoptimizador" Content="Optimzar Windows" Margin="5,0" />
                         </StackPanel>
                         
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="4" Margin="10">
                             <Label Content="Toolkits" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            <CheckBox Name="Installpowertoys" Content="Microsoft Powertoys" Margin="5,0" />
+                            
                             <CheckBox Name="Installrufus" Content="Rufus Imager" Margin="5,0" />
                             <CheckBox Name="Installttaskbar" Content="Translucent Taskbar" Margin="5,0" />
                             <CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0" />
