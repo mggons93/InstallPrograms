@@ -116,6 +116,9 @@
                             <CheckBox Name="Installanydesk" Content="Anydesk" Margin="5,0" />
                             <CheckBox Name="Installrustdesk" Content="RustDesk (Recomendado)" IsChecked="True" Margin="5,0" />
                             <CheckBox Name="InstallTightVNC" Content="TightVNC"  Margin="5,0" />
+
+                            <Label Content="Mezcladores" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <CheckBox Name="Installvirtualdj" Content="Virtual DJ" Margin="5,0" />
                         </StackPanel>
                         
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="3" Margin="10">
@@ -144,9 +147,6 @@
                             <CheckBox Name="Installoptimizador" Content="Optimzar Windows" Margin="5,0" />
                             <TextBlock Text="Esta Opcion es Opcional" FontWeight="Bold" FontSize="12" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-                            <Label Content="Mezcladores" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            <CheckBox Name="Installvirtualdj" Content="Virtual DJ" Margin="5,0" />
-
                             <Label Content="Congeladores PC" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installdeepfreezer" Content="Deep Freezer" Margin="5,0" />
 
@@ -163,7 +163,7 @@
                         </StackPanel>
 
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="5" Margin="10">
-                            <Label Content="Toolkits2" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <Label Content="" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                             <Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
                             <Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema"/>
