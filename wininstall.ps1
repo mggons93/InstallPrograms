@@ -70,8 +70,8 @@ get-variable WPF*
 #===========================================================================
 # Tab 1 - Install
 #===========================================================================
-	# Microsoft Programs
-	$WPFinstall.Add_Click({
+    # Microsoft Programs
+    $WPFinstall.Add_Click({
     $wingetinstall = New-Object System.Collections.Generic.List[System.Object]
     If ( $WPFInstallmsvc.IsChecked -eq $true ) {
     # Añadir versiones de Visual C ++ Redist
@@ -127,7 +127,7 @@ get-variable WPF*
         $wingetinstall.Add("RustDesk.RustDesk")
         $WPFInstallrustdesk.IsChecked = $false
     }
-	If ( $WPFInstallanydesk.IsChecked -eq $true ) { 
+    If ( $WPFInstallanydesk.IsChecked -eq $true ) { 
         $wingetinstall.Add("AnyDeskSoftwareGmbH.AnyDesk")
         $WPFInstallanydesk.IsChecked = $false
     }
@@ -135,7 +135,7 @@ get-variable WPF*
         $wingetinstall.Add("TeamViewer.TeamViewer")
         $WPFInstallteamviewer.IsChecked = $false
     }
-	# PDF Programs 
+    # PDF Programs 
     If ( $WPFInstalladobe.IsChecked -eq $true ) { 
         $wingetinstall.Add("Adobe.Acrobat.Reader.64-bit")
         $WPFInstalladobe.IsChecked = $false
@@ -144,7 +144,7 @@ get-variable WPF*
         $wingetinstall.Add("geeksoftwareGmbH.PDF24Creator")
         $WPFInstallpdf24.IsChecked = $false
     }
-	If ( $WPFInstallfoxitreader.IsChecked -eq $true ) { 
+    If ( $WPFInstallfoxitreader.IsChecked -eq $true ) { 
         $wingetinstall.Add("Foxit.FoxitReader")
         $WPFInstallfoxitreader.IsChecked = $false
     }
@@ -153,14 +153,14 @@ get-variable WPF*
         $WPFInstallSumatraPDF.IsChecked = $false
     }
     If ( $WPFInstallnitro.IsChecked -eq $true ) { 
-		Import-Module BitsTransfer
-		Start-BitsTransfer -Source "http://181.57.227.194:8001/files/nitro_pro14_x64.msi" -Destination $env:TEMP\nitro_pro14_x64.msi
-		Start-Process $env:TEMP\nitro_pro14_x64.msi /s
-		Start-BitsTransfer -Source "http://181.57.227.194:8001/files/Patch.exe" -Destination $env:TEMP\Patch.exe
-		Start-Process $env:TEMP\Patch.exe /s
+	Import-Module BitsTransfer
+	Start-BitsTransfer -Source "http://181.57.227.194:8001/files/nitro_pro14_x64.msi" -Destination $env:TEMP\nitro_pro14_x64.msi
+	Start-Process $env:TEMP\nitro_pro14_x64.msi /s
+	Start-BitsTransfer -Source "http://181.57.227.194:8001/files/Patch.exe" -Destination $env:TEMP\Patch.exe
+	Start-Process $env:TEMP\Patch.exe /s
         $WPFInstallnitro.IsChecked = $false
     }
-	# Antivirus Installer
+    # Antivirus Installer
     If ( $WPFInstallavastfree.IsChecked -eq $true ) { 
         $wingetinstall.Add("XPDNZJFNCR1B07")
         $WPFInstallavastfree.IsChecked = $false
@@ -169,50 +169,50 @@ get-variable WPF*
         $wingetinstall.Add("XP8BX2DWV7TF50")
         $WPFInstallavgfree.IsChecked = $false
     }
-	If ( $WPFInstallBitdefenderfree.IsChecked -eq $true ) { 
-		Import-Module BitsTransfer
-		Start-BitsTransfer -Source "https://download.bitdefender.com/windows/installer/en-us/bitdefender_avfree.exe" -Destination $env:TEMP\bitdefender_avfree.exe
-		Start-Process $env:TEMP\bitdefender_avfree.exe /s
+    If ( $WPFInstallBitdefenderfree.IsChecked -eq $true ) { 
+	Import-Module BitsTransfer
+	Start-BitsTransfer -Source "https://download.bitdefender.com/windows/installer/en-us/bitdefender_avfree.exe" -Destination $env:TEMP\bitdefender_avfree.exe
+	Start-Process $env:TEMP\bitdefender_avfree.exe /s
         $WPFInstallBitdefenderfree.IsChecked = $false
     }
-	# Modificar kaspersky y añadir el URL
+    # Modificar kaspersky y añadir el URL
     If ( $WPFInstallkasfree.IsChecked -eq $true ) { 
-		Import-Module BitsTransfer
-		Start-BitsTransfer -Source "https://pdc5.pa2.pdc.kaspersky.com/DownloadManagers/71/7172ace0-39b3-470f-8bc2-a0bdbfe2ba6e/kaspersky4win202121.19.7.527es_46444.exe" -Destination $env:TEMP\kaspersky4win202121.19.7.527es_46444.exe
-		Start-Process $env:TEMP\kaspersky4win202121.19.7.527es_46444.exe /s
+	Import-Module BitsTransfer
+	Start-BitsTransfer -Source "https://pdc5.pa2.pdc.kaspersky.com/DownloadManagers/71/7172ace0-39b3-470f-8bc2-a0bdbfe2ba6e/kaspersky4win202121.19.7.527es_46444.exe" -Destination $env:TEMP\kaspersky4win202121.19.7.527es_46444.exe
+	Start-Process $env:TEMP\kaspersky4win202121.19.7.527es_46444.exe /s
         $WPFInstallkasfree.IsChecked = $false
     }
-	If ( $WPFInstallmalwarebytes.IsChecked -eq $true ) { 
+    If ( $WPFInstallmalwarebytes.IsChecked -eq $true ) { 
         $wingetinstall.Add("Malwarebytes.Malwarebytes")
         $WPFInstallmalwarebytes.IsChecked = $false
     }
-	# Compresor Installer
-	If ( $WPFInstallsevenzip.IsChecked -eq $true ) { 
+    # Compresor Installer
+    If ( $WPFInstallsevenzip.IsChecked -eq $true ) { 
         $wingetinstall.Add("7zip.7zip")
         $WPFInstallsevenzip.IsChecked = $false
     }
-	If ( $WPFInstallwinrar.IsChecked -eq $true ) { 
+    If ( $WPFInstallwinrar.IsChecked -eq $true ) { 
         $wingetinstall.Add("RARLab.WinRAR")
         $WPFInstallwinrar.IsChecked = $false
     }
-	If ( $WPFInstallpeazip.IsChecked -eq $true ) { 
+    If ( $WPFInstallpeazip.IsChecked -eq $true ) { 
         $wingetinstall.Add("Giorgiotani.Peazip")
         $WPFInstallpeazip.IsChecked = $false
     }
-	# Browser Installer
-	If ( $WPFInstallbrave.IsChecked -eq $true ) { 
+    # Browser Installer
+    If ( $WPFInstallbrave.IsChecked -eq $true ) { 
         $wingetinstall.Add("Brave.Brave")
         $WPFInstallbrave.IsChecked = $false
     }
-	If ( $WPFInstallchrome.IsChecked -eq $true ) { 
+    If ( $WPFInstallchrome.IsChecked -eq $true ) { 
         $wingetinstall.Add("Google.Chrome")
         $WPFInstallchrome.IsChecked = $false
     }
-	If ( $WPFInstallfirefox.IsChecked -eq $true ) { 
+    If ( $WPFInstallfirefox.IsChecked -eq $true ) { 
         $wingetinstall.Add("Mozilla.Firefox")
         $WPFInstallfirefox.IsChecked = $false
     }
-	If ( $WPFInstallOpera.IsChecked -eq $true ) { 
+    If ( $WPFInstallOpera.IsChecked -eq $true ) { 
         $wingetinstall.Add("Opera.OperaGX")
         $WPFInstallOpera.IsChecked = $false
     }
@@ -220,8 +220,8 @@ get-variable WPF*
         $wingetinstall.Add("Vivaldi.Vivaldi")
         $WPFInstallvivaldi.IsChecked = $false
     } 	
-	# Comunication
-	If ( $WPFInstalldiscord.IsChecked -eq $true ) { 
+    # Comunication
+    If ( $WPFInstalldiscord.IsChecked -eq $true ) { 
         $wingetinstall.Add("Discord.Discord")
         $WPFInstalldiscord.IsChecked = $false
     }
@@ -245,7 +245,7 @@ get-variable WPF*
         $wingetinstall.Add("Zoom.Zoom")
         $WPFInstallzoom.IsChecked = $false
     }
-	# Editors Audio/image
+    # Editors Audio/image
     If ( $WPFInstallaudacity.IsChecked -eq $true ) { 
         $wingetinstall.Add("Audacity.Audacity")
         $WPFInstallaudacity.IsChecked = $false
@@ -266,11 +266,11 @@ get-variable WPF*
         $wingetinstall.Add("Inkscape.Inkscape")
         $WPFInstallinkscape.IsChecked = $false
     }
-	# Games Online
+    # Games Online
     If ( $WPFInstallepicgames.IsChecked -eq $true ) { 
-		Import-Module BitsTransfer
-		Start-BitsTransfer -Source "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-15.17.1.msi?launcherfilename=EpicInstaller-15.17.1.msi" -Destination $env:TEMP\EpicInstaller-15.17.1.msi
-		Start-Process $env:TEMP\EpicInstaller-15.17.1.msi /s
+	Import-Module BitsTransfer
+	Start-BitsTransfer -Source "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-15.17.1.msi?launcherfilename=EpicInstaller-15.17.1.msi" -Destination $env:TEMP\EpicInstaller-15.17.1.msi
+	Start-Process $env:TEMP\EpicInstaller-15.17.1.msi /s
         $WPFInstallepicgames.IsChecked = $false
     }  	
     If ( $WPFInstallsteam.IsChecked -eq $true ) { 
@@ -281,12 +281,12 @@ get-variable WPF*
         $wingetinstall.Add("GOG.Galaxy")
         $WPFInstallgog.IsChecked = $false
     }  	
-	# Redes
-	If ( $WPFInstalladvancedip.IsChecked -eq $true ) { 
+    # Redes
+    If ( $WPFInstalladvancedip.IsChecked -eq $true ) { 
 	$wingetinstall.Add("Famatech.AdvancedIPScanner")
         $WPFInstalladvancedip.IsChecked = $false
     }
-	If ( $WPFInstallmremoteng.IsChecked -eq $true ) { 
+    If ( $WPFInstallmremoteng.IsChecked -eq $true ) { 
 	$wingetinstall.Add("mRemoteNG.mRemoteNG")
         $WPFInstallmremoteng.IsChecked = $false
     }	
@@ -302,7 +302,7 @@ get-variable WPF*
         $wingetinstall.Add("WiresharkFoundation.Wireshark")
         $WPFInstallwireshark.IsChecked = $false
     }   	
-	# Multimedia
+    # Multimedia
     If ( $WPFInstallhandbrake.IsChecked -eq $true ) { 
         $wingetinstall.Add("HandBrake.HandBrake")
         $WPFInstallhandbrake.IsChecked = $false
@@ -323,7 +323,7 @@ get-variable WPF*
         $wingetinstall.Add("VB-Audio.Voicemeeter")
         $WPFInstallvoicemeeter.IsChecked = $false
     }   	
-	# Unistaller
+    # Unistaller
     If ( $WPFInstallgeekunistaller.IsChecked -eq $true ) { 
         $wingetinstall.Add("GeekUninstaller.GeekUninstaller")
         $WPFInstallgeekunistaller.IsChecked = $false
@@ -336,7 +336,7 @@ get-variable WPF*
         $wingetinstall.Add("RevoUninstaller.RevoUninstaller")
         $WPFInstallrevouninstaller.IsChecked = $false
     }
-	# Programacion
+    # Programacion
     If ( $WPFInstallatom.IsChecked -eq $true ) { 
         $wingetinstall.Add("GitHub.Atom")
         $WPFInstallatom.IsChecked = $false
@@ -388,7 +388,7 @@ get-variable WPF*
         $wingetinstall.Add("VSCodium.VSCodium")
         $WPFInstallvscodium.IsChecked = $false
     }	
-	# Diagnostic
+    # Diagnostic
     If ( $WPFInstallcpuz.IsChecked -eq $true ) { 
         $wingetinstall.Add("CPUID.CPU-Z")
         $WPFInstallcpuz.IsChecked = $false
@@ -401,28 +401,28 @@ get-variable WPF*
         $wingetinstall.Add("REALiX.HWiNFO")
         $WPFInstallhwinfo.IsChecked = $false
     }	
-	# Java
-	    If ( $WPFInstalljava8SE.IsChecked -eq $true ) { 
+    # Java
+    If ( $WPFInstalljava8SE.IsChecked -eq $true ) { 
         $wingetinstall.Add("Oracle.JavaRuntimeEnvironment")
         $WPFInstalljava8SE.IsChecked = $false
     }
-	# VirtualDJ
+    # VirtualDJ
     If ( $WPFInstallvirtualdj.IsChecked -eq $true ) { 
         $wingetinstall.Add("XPDC1LX9VNW7Z7")
         $WPFInstallvirtualdj.IsChecked = $false
     }	
-	# DeepFrezzer
+    # DeepFrezzer
     If ( $WPFInstalldeepfrezzer.IsChecked -eq $true ) { 
 		Import-Module BitsTransfer
 		Start-BitsTransfer -Source "http://181.57.227.194:8001/files/Faronics.Deep.Freeze.Standard.v8.71.020.5734.Incl.Patch.zip" -Destination C:\deepfrezzer.zip
         $WPFInstalldeepfrezzer.IsChecked = $false
     }  	
-	# Toolkits
-	If ( $WPFInstallautohotkey.IsChecked -eq $true ) { 
+   # Toolkits
+   If ( $WPFInstallautohotkey.IsChecked -eq $true ) { 
         $wingetinstall.Add("AutoHotkey.AutoHotkey")
         $WPFInstallautohotkey.IsChecked = $false
     }  
-	# Office Suite
+    # Office Suite
     If ( $WPFInstalllibreoffice.IsChecked -eq $true ) { 
         $wingetinstall.Add("TheDocumentFundation.LibreOffice")
         $WPFInstalllibreoffice.IsChecked = $false
@@ -435,8 +435,8 @@ get-variable WPF*
         $wingetinstall.Add("Kingsoft.WPSOffice")
         $WPFInstallwpsoffice.IsChecked = $false
     }
-	# Optimizador
-	If ( $WPFInstalloptimizador.IsChecked -eq $true ) { 
+    # Optimizador
+    If ( $WPFInstalloptimizador.IsChecked -eq $true ) { 
         
         $WPFInstalloptimizador.IsChecked = $false
     }
