@@ -91,7 +91,7 @@
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="2" Margin="10">
                             <Label Content="Editores y Visualizador PDF" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0" />
-                            <CheckBox Name="Installfoxitreader" Content="Foxit PDF Reader" Margin="5,0" Checked="Installfoxitreader_Checked" />
+                            <CheckBox Name="Installfoxitreader" Content="Foxit PDF Reader" Margin="5,0" />
                             <CheckBox Name="Installnitro" Content="Nitro PDF Pro" Margin="5,0" />
                             <CheckBox Name="Installpdf24" Content="PDF24 Creator" Margin="5,0" />
                             <CheckBox Name="InstallSumatraPDF" Content="Sumatra PDF" Margin="5,0" />
