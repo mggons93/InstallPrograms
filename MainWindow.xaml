@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        
         mc:Ignorable="d"
         Background="#FFFFFF"
         Title="Utilidad de Instalacion de Programas en Windows 10/11 by Mggons" Height="417" Width="786" WindowState="Maximized">
