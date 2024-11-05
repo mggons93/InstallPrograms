@@ -80,7 +80,7 @@
                             <CheckBox Name="Installmpc" Content="Media Player Classic" Margin="5,0" />
                             <CheckBox Name="Installobs" Content="OBS Studio" Margin="5,0" />
                             <CheckBox Name="Installvlc" Content="VLC (Video Player)" IsChecked="True" Margin="5,0" />
-                            <CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0" Checked="Installvoicemeeter_Checked" />
+                            <CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0" />
 
                             <Label Content="Desinstaladores" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installgeekunistaller" Content="Geek Unistaller" Margin="5,0" />
