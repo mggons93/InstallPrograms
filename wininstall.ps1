@@ -560,6 +560,9 @@ $WPFInstallUpgrade.Add_Click({
 
     [System.Windows.MessageBox]::Show($Messageboxbody,$MessageboxTitle,$ButtonType,$MessageIcon)
 })
+$WPFDonate.Add_Click({
+    Start-Process "https://cutt.ly/DonacionSyA"
+})
 
 #===========================================================================
 # Shows the form
