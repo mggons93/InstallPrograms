@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        
         mc:Ignorable="d"
         Background="#000000"
         Title="Utilidad de Instalacion de Programas en Windows 10/11 by Mggons" Height="493" Width="786" WindowState="Maximized">
@@ -167,8 +166,9 @@
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="5" Margin="10">
                             <Label Content="" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-                            <Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
-                            <Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema"/>
+                            <Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados."/>
+                            <Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema."/>
+                            <Button Name="Donate" Background="AliceBlue" Content="Donacion" Margin="20,5,20,5" ToolTip="Donacion por el projecto."/>
                         </StackPanel>
                     </Grid>
                 </TabItem>
