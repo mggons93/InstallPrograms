@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
         mc:Ignorable="d"
-        Background="#000000"
-        Title="Utilidad de Instalacion de Programas en Windows 10/11 by Mggons" Height="493" Width="786" WindowState="Maximized">
+        Background="#FFFFFF"
+        Title="Utilidad de Instalacion de Programas en Windows 10/11 by Mggons" Height="417" Width="786" WindowState="Maximized">
     <Viewbox>
         <Grid Background="#ffffff" ShowGridLines="False" Name="MainGrid" >
             <Grid.ColumnDefinitions>
@@ -14,7 +15,7 @@
             </Grid.ColumnDefinitions>
             <TabControl Grid.Column="1" Padding="-1" Name="TabNav" SelectedIndex="0">
                 <TabItem Header="Install" Visibility="Collapsed" Name="Tab1">
-                    <Grid Background="#000000">
+                    <Grid Background="#FFFFFF">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="1*"/>
@@ -79,7 +80,7 @@
                             <CheckBox Name="Installmpc" Content="Media Player Classic" Margin="5,0" />
                             <CheckBox Name="Installobs" Content="OBS Studio" Margin="5,0" />
                             <CheckBox Name="Installvlc" Content="VLC (Video Player)" IsChecked="True" Margin="5,0" />
-                            <CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0" />
+                            <CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0" Checked="Installvoicemeeter_Checked" />
 
                             <Label Content="Desinstaladores" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installgeekunistaller" Content="Geek Unistaller" Margin="5,0" />
@@ -90,7 +91,7 @@
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="2" Margin="10">
                             <Label Content="Editores y Visualizador PDF" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0" />
-                            <CheckBox Name="Installfoxitreader" Content="Foxit PDF Reader" Margin="5,0" />
+                            <CheckBox Name="Installfoxitreader" Content="Foxit PDF Reader" Margin="5,0" Checked="Installfoxitreader_Checked" />
                             <CheckBox Name="Installnitro" Content="Nitro PDF Pro" Margin="5,0" />
                             <CheckBox Name="Installpdf24" Content="PDF24 Creator" Margin="5,0" />
                             <CheckBox Name="InstallSumatraPDF" Content="Sumatra PDF" Margin="5,0" />
@@ -145,11 +146,11 @@
                             <Label Content="Optimizacion" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installoptimizador" Content="Optimzar Windows" Margin="5,0" />
                             <TextBlock Text="Esta Opcion es Opcional" FontWeight="Bold" FontSize="12" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            <TextBlock Text="Esta Opcion esta no disponible" FontWeight="Bold" FontSize="12.5" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+
 
                             <Label Content="Congeladores PC" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installdeepfreezer" Content="Deep Freezer" Margin="5,0" />
-                            <TextBlock Text="Este programa se encuentra en C:\" FontWeight="Bold" FontSize="12.5" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         </StackPanel>
                         
@@ -166,9 +167,10 @@
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="5" Margin="10">
                             <Label Content="" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-                            <Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados."/>
-                            <Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema."/>
+                            <Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
+                            <Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema"/>
                             <Button Name="Donate" Background="AliceBlue" Content="Donacion" Margin="20,5,20,5" ToolTip="Donacion por el projecto."/>
+
                         </StackPanel>
                     </Grid>
                 </TabItem>
