@@ -29,7 +29,7 @@
                             <CheckBox Name="Installbrave" Content="Brave (Latest)" Margin="5,0" />
                             <CheckBox Name="Installchrome" Content="Google Chrome (Latest)" IsChecked="True" Margin="5,0" />
                             <CheckBox Name="Installfirefox" Content="Mozilla Firefox (Latest)" Margin="5,0" />
-                            <CheckBox Name="InstallOpera" Content="Opera (Latest)" Margin="5,0" />
+                            <CheckBox Name="InstallOpera" Content="Opera GX (Latest)" Margin="5,0" />
                             <CheckBox Name="Installvivaldi" Content="Vivaldi (Latest)" Margin="5,0" />
                             <TextBlock Text="Mas Reciente = Latest" FontWeight="Bold" FontSize="12.5" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
@@ -80,7 +80,7 @@
                             <CheckBox Name="Installmpc" Content="Media Player Classic" Margin="5,0" />
                             <CheckBox Name="Installobs" Content="OBS Studio" Margin="5,0" />
                             <CheckBox Name="Installvlc" Content="VLC (Video Player)" IsChecked="True" Margin="5,0" />
-                            <CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0" />
+                            <CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0" Checked="Installvoicemeeter_Checked" />
 
                             <Label Content="Desinstaladores" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installgeekunistaller" Content="Geek Unistaller" Margin="5,0" />
@@ -91,7 +91,7 @@
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="2" Margin="10">
                             <Label Content="Editores y Visualizador PDF" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0" />
-                            <CheckBox Name="Installfoxitreader" Content="Foxit PDF Reader" Margin="5,0" />
+                            <CheckBox Name="Installfoxitreader" Content="Foxit PDF Reader" Margin="5,0" Checked="Installfoxitreader_Checked" />
                             <CheckBox Name="Installnitro" Content="Nitro PDF Pro" Margin="5,0" />
                             <CheckBox Name="Installpdf24" Content="PDF24 Creator" Margin="5,0" />
                             <CheckBox Name="InstallSumatraPDF" Content="Sumatra PDF" Margin="5,0" />
@@ -103,8 +103,7 @@
                             <CheckBox Name="Installnotepadplus" Content="Notepad++" IsChecked="True" Margin="5,0" />
                             <CheckBox Name="Installnodejs" Content="NodeJS" Margin="5,0" />
                             <CheckBox Name="Installnodejslts" Content="NodeJS LTS" Margin="5,0" />
-                            <CheckBox Name="Installjava16" Content="OpenJDK Java 16" Margin="5,0" />
-                            <CheckBox Name="Installjava18" Content="Oracle Java 18" Margin="5,0" />
+                            <CheckBox Name="Installjava17" Content="OpenJDK Java 16" Margin="5,0" />
                             <CheckBox Name="Installpython3" Content="Python3" Margin="5,0" />
                             <CheckBox Name="Installsublime" Content="Sublime" Margin="5,0" />
                             <CheckBox Name="Installvisualstudio" Content="VS Community 2022" Margin="5,0" />
@@ -146,7 +145,7 @@
                             <TextBlock Text="Esta Opcion es Opcional" FontWeight="Bold" FontSize="12" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                             <Label Content="Mezcladores" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            <CheckBox Name="InstallvirtualDJ" Content="Virtual DJ" Margin="5,0" />
+                            <CheckBox Name="Installvirtualdj" Content="Virtual DJ" Margin="5,0" />
 
                             <Label Content="Congeladores PC" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installdeepfreezer" Content="Deep Freezer" Margin="5,0" />
@@ -155,11 +154,12 @@
                         
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="4" Margin="10">
                             <Label Content="Toolkits" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            
+                            <CheckBox Name="InstallAutoHotkey" Content="AutoHotkey" Margin="5,0" />
                             <CheckBox Name="Installrufus" Content="Rufus Imager" Margin="5,0" />
                             <CheckBox Name="Installttaskbar" Content="Translucent Taskbar" Margin="5,0" />
                             <CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0" />
                             <CheckBox Name="Installesearch" Content="Everything Search" Margin="5,0" />
+                            
                         </StackPanel>
 
                         <StackPanel Background="#ffffff" SnapsToDevicePixels="True" Grid.Column="5" Margin="10">
