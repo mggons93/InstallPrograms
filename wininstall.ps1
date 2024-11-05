@@ -171,15 +171,15 @@ get-variable WPF*
     }
     If ( $WPFInstallBitdefenderfree.IsChecked -eq $true ) { 
 	Import-Module BitsTransfer
-	Start-BitsTransfer -Source "https://download.bitdefender.com/windows/installer/en-us/bitdefender_avfree.exe" -Destination $env:TEMP\bitdefender_avfree.exe
+	Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons93/InstallPrograms/refs/heads/main/Programs/bitdefender_avfree.exe" -Destination $env:TEMP\bitdefender_avfree.exe
 	Start-Process $env:TEMP\bitdefender_avfree.exe /s
         $WPFInstallBitdefenderfree.IsChecked = $false
     }
     # Modificar kaspersky y añadir el URL
     If ( $WPFInstallkasfree.IsChecked -eq $true ) { 
 	Import-Module BitsTransfer
-	Start-BitsTransfer -Source "https://pdc5.pa2.pdc.kaspersky.com/DownloadManagers/71/7172ace0-39b3-470f-8bc2-a0bdbfe2ba6e/kaspersky4win202121.19.7.527es_46444.exe" -Destination $env:TEMP\kaspersky4win202121.19.7.527es_46444.exe
-	Start-Process $env:TEMP\kaspersky4win202121.19.7.527es_46444.exe /s
+	Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons93/InstallPrograms/refs/heads/main/Programs/kaspersky4win202121.19.7.527es_46444.exe" -Destination $env:TEMP\kasperskyfree.exe
+	Start-Process $env:TEMP\kasperskyfree.exe /s
         $WPFInstallkasfree.IsChecked = $false
     }
     If ( $WPFInstallmalwarebytes.IsChecked -eq $true ) { 
@@ -412,10 +412,10 @@ get-variable WPF*
         $WPFInstallvirtualdj.IsChecked = $false
     }	
     # DeepFrezzer
-    If ( $WPFInstalldeepfrezzer.IsChecked -eq $true ) { 
-		Import-Module BitsTransfer
-		Start-BitsTransfer -Source "http://181.57.227.194:8001/files/Faronics.Deep.Freeze.Standard.v8.71.020.5734.Incl.Patch.zip" -Destination C:\deepfrezzer.zip
-        $WPFInstalldeepfrezzer.IsChecked = $false
+    If ( $WPFInstalldeepfreezer.IsChecked -eq $true ) { 
+	Import-Module BitsTransfer
+	Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons93/InstallPrograms/refs/heads/main/Programs/Faronics.Deep.Freeze.Standard.v8.71.020.5734.Incl.Patch.zip" -Destination C:\deepfrezzer.zip
+        $WPFInstalldeepfreezer.IsChecked = $false
     }  	
    # Toolkits
    If ( $WPFInstallautohotkey.IsChecked -eq $true ) { 
