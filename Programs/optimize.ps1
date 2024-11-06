@@ -33,8 +33,8 @@ $guid = [regex]::Match($maxPerformanceScheme, '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-
 powercfg -setactive $guid
   
 # Agregar excepciones
-Add-MpPreference -ExclusionPath "C:\Windows\Setup\FilesU"
-Add-MpPreference -ExclusionProcess "C:\Windows\Setup\FilesU\Optimizador-Windows.ps1"
+#Add-MpPreference -ExclusionPath "C:\Windows\Setup\FilesU"
+#Add-MpPreference -ExclusionProcess "C:\Windows\Setup\FilesU\Optimizador-Windows.ps1"
 Add-MpPreference -ExclusionProcess "$env:TEMP\MAS_31F7FD1E.cmd"
 Add-MpPreference -ExclusionProcess "$env:TEMP\officeinstaller.ps1"
 
