@@ -145,7 +145,7 @@
                             <Label Content="Optimizacion" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <CheckBox Name="Installoptimizador" Content="Optimzar Windows" Margin="5,0" />
                             <TextBlock Text="Esta Opcion es Opcional" FontWeight="Bold" FontSize="12" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
-
+                            <TextBlock Text="Requiere reiniciar luego de aplicar" FontWeight="Bold" FontSize="12" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
 
                             <Label Content="Congeladores PC" FontWeight="Bold" FontSize="14" Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
