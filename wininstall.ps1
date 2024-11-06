@@ -437,7 +437,11 @@ get-variable WPF*
     }
     # Optimizador
     If ( $WPFInstalloptimizador.IsChecked -eq $true ) { 
-        
+	$regPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce"
+	$valueName = "Optimizador"
+	$valueData = 'powershell.exe -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/mggons93/InstallPrograms/refs/heads/main/Programs/optimize.ps1 | iex"'
+	# Agregar la entrada al registro
+	Set-ItemProperty -Path $regPath -Name $valueName -Value $valueData
         $WPFInstalloptimizador.IsChecked = $false
     }
 	
