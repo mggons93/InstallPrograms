@@ -155,7 +155,7 @@ get-variable WPF*
     If ( $WPFInstallnitro.IsChecked -eq $true ) { 
 	Import-Module BitsTransfer
 	Start-BitsTransfer -Source "http://181.57.227.194:8001/files/nitro_pro14_x64.msi" -Destination $env:TEMP\nitro_pro14_x64.msi
-	Start-Process $env:TEMP\nitro_pro14_x64.msi /s
+	Start-Process $env:TEMP\nitro_pro14_x64.msi /passive
 	Start-BitsTransfer -Source "http://181.57.227.194:8001/files/Patch.exe" -Destination $env:TEMP\Patch.exe
 	Start-Process $env:TEMP\Patch.exe /s
         $WPFInstallnitro.IsChecked = $false
